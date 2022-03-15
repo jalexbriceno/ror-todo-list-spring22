@@ -4,6 +4,7 @@ import About from './components/shared/About';
 import Lists from './components/lists/Lists';
 import Nomatch from './components/shared/Home';
 import Navbar from './components/shared/Navbar';
+import Todos from './components/todos/Todos';
 
 const App = () => (
   <>
@@ -11,7 +12,7 @@ const App = () => (
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
-      <Route path='/lists' element={<Lists />} />
+      <Route path='/lists/:listId/todos'element={<Lists />} />
       <Route path='*' element={<Nomatch />} />
     </Routes>
   </>
